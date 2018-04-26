@@ -1,0 +1,9 @@
+{
+  "name": "xmaxjs-ecc",
+  "version": "0.0.0",
+  "description": "Xmax elliptic curve library",
+  "main": "src/index.js",
+  "author": {
+    "name": ""
+  }
+}
