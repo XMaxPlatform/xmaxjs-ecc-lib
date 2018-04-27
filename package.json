@@ -13,6 +13,8 @@
     "bigi": "^1.4.2",
     "ecurve": "^1.0.5",
     "assert": "*",
-    "randombytes": "^2.0.5"
+    "randombytes": "^2.0.5",
+    "bytebuffer": "^5.0.1",
+    "browserify-aes": "^1.0.6"
   }
 }
