@@ -1,4 +1,4 @@
-const bs58 = require('base58');
+const bs58 = require('bs58');
 const ecurve = require('ecurve');
 const secp256k1 = ecurve.getCurveByName('secp256k1');
 const assert = require('assert');
