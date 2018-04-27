@@ -1,10 +1,19 @@
 {
   "name": "xmaxjs-ecc",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Xmax elliptic curve library",
   "main": "src/index.js",
   "author": {
     "name": ""
+  },
+  "scripts": {
+    "docs": "npm run documentation -- readme src/api_common.js --section \"Common API\" --shallow",
+    "documentation": "node node_modules/documentation/bin/documentation.js",
+    "test": "mocha --use_strict src/*.test.js",
+    "build": "npm run docs && npm run build_lib && npm run build_browser",
+    "build_lib": "node_modules/babel-cli/bin/babel.js src --out-dir lib",
+    "build_browser": "mkdir -p dist && browserify -o dist/xmaxjs-ecc.js -s xmaxjs_ecc src/index.js && sha256sum dist/xmaxjs-ecc.js",
+    "build_browser_test": "mkdir -p dist && browserify -o dist/xmaxjs-ecc-test.js src/*.test.js"
   },
   "dependencies": {
     "create-hash": "^1.1.3",
@@ -16,5 +25,18 @@
     "randombytes": "^2.0.5",
     "bytebuffer": "^5.0.1",
     "browserify-aes": "^1.0.6"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "browserify": "^14.4.0",
+    "documentation": "^5.3.2",
+    "mocha": "^3.5.3"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
   }
 }
