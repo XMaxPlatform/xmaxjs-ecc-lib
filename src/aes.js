@@ -3,8 +3,8 @@ const ByteBuffer = require('bytebuffer')
 const crypto = require('browserify-aes')
 const assert = require('assert')
 
-const PublicKey = require('./key_public')
-const PrivateKey = require('./key_private')
+const PublicKey = require('./public_key')
+const PrivateKey = require('./private_key')
 const hash = require('./hash')
 
 const Long = ByteBuffer.Long;
