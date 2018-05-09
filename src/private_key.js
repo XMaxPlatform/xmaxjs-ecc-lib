@@ -219,6 +219,14 @@ PrivateKey.isValid = function(key) {
     }
 }
 
+/**
+  @return {Promise<PrivateKey>} for testing, does not require initialize().
+*/
+PrivateKey.unsafeRandomKey = function () {
+    return PrivateKey.initialize().then(function () {
+        return PrivateKey.fromBuffer(keyUtils.random32ByteBuffer({ safe: false }));
+    });
+};
 
 let initialized = false, unitTested = false
 
