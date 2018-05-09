@@ -94,7 +94,7 @@ PublicKey.fromPoint = function(point) {
     @return PublicKey or `null` (if the public_key string is invalid)
     @deprecated fromPublicKeyString (use fromString instead)
 */
-PublicKey.fromString = function(public_key, addres_sprefix = config.address_prefix) {
+PublicKey.fromString = function(public_key, address_prefix = config.address_prefix) {
     try {
         return PublicKey.fromStringOrThrow(public_key, address_prefix)
     } catch (e) {
