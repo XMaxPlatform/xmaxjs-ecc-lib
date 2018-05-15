@@ -1,3 +1,3 @@
-﻿# xmaxjs-ecc
+﻿# xmaxjs-ecc-lib
 
 

@@ -1,5 +1,5 @@
 {
-  "name": "xmaxjs-ecc",
+  "name": "xmaxjs-ecc-lib",
   "version": "0.0.1",
   "description": "Xmax elliptic curve library",
   "main": "src/index.js",
@@ -10,7 +10,7 @@
     "test": "mocha --use_strict src/*.test.js",
     "build": "npm run build_lib && npm run build_browser",
     "build_lib": "node node_modules/babel-cli/bin/babel.js src --out-dir lib",
-    "build_browser": "mkdirp dist && browserify -o dist/xmaxjs-ecc.js -s xmaxjs_ecc src/index.js && sha256sum dist/xmaxjs-ecc.js",
+    "build_browser": "mkdirp dist && browserify -o dist/xmaxjs-ecc-lib.js -s xmaxjs_ecc-lib src/index.js && sha256sum dist/xmaxjs-ecc-lib.js",
     "build_browser_test": "mkdirp dist && browserify -o dist/xmaxjs-ecc-test.js src/*.test.js"
   },
   "dependencies": {
